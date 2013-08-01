@@ -1,0 +1,117 @@
+% XeLaTeX can use any Mac OS X font. See the setromanfont command below.
+% Input to XeLaTeX is full Unicode, so Unicode characters can be typed directly into the source.
+
+% The next lines tell TeXShop to typeset with xelatex, and to open and save the source with Unicode encoding.
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+%\documentclass[12pt]{article}
+\documentclass[a4paper]{article}
+\usepackage{geometry}                	% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                  % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                	% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+
+%page dimension
+%\hoffset = 0.5in
+%\voffset = 0.5in
+
+% Will Robertson's fontspec.sty can be used to simplify font choices.
+% To experiment, open /Applications/Font Book to examine the fonts provided on Mac OS X,
+% and change "Hoefler Text" to any of these choices.
+
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont[Mapping=tex-text]{Hoefler Text}
+%\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+%\setmonofont[Scale=MatchLowercase]{Andale Mono}
+\setmainfont[Scale=1.1]{TH Sarabun New} 
+\XeTeXlinebreaklocale 'th_TH'
+
+% add a dot after the section number
+\usepackage{titlesec}
+\titlelabel{\thetitle.\quad}
+
+% add tab
+\newcommand{\tab}{\hspace{1.27cm}}
+
+\reversemarginpar % Move the margin to the left of the page 
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+%\newcommand{\MarginText}[1]{\marginpar{\raggedleft#1}} % New command defining the margin text style
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}}
+%\newcommand{\Description}[1]{\hangindent=1.27cm\hangafter=0\noindent\raggedright{#1}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\title{ข้อเสนอโครงงานมหาบัณฑิต (MASTER PROJECT PROPOSAL)}
+\author{The Author}
+%\date{}								% Activate to display a given date or no date
+
+%Paragraph indent and break
+\usepackage{indentfirst}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+%\setlength{\parskip}{1cm plus4mm minus3mm}
+
+% For many users, the previous commands will be enough.
+% If you want to directly input Unicode, add an Input Menu or Keyboard to the menu bar 
+% using the International Panel in System Preferences.
+% Unicode must be typeset using a font containing the appropriate characters.
+% Remove the comment signs below for examples.
+
+% \newfontfamily{\A}{Geeza Pro}
+% \newfontfamily{\H}[Scale=0.9]{Lucida Grande}
+% \newfontfamily{\J}[Scale=0.85]{Osaka}
+%----------------------------------------------------------------------------------------
+\begin{document}
+%\maketitle
+
+\begin{center}
+{\huge \bf ข้อเสนอโครงงานมหาบัณฑิต}
+\end{center}
+
+\noindent{{\LARGE \bf ชื่อหัวเรื่อง}}
+
+%\Description{\MarginText{ภาษาไทยx}การพัฒนาระบบสำหรับการรวบรวมบัตรสมาชิก บนเทคโนโลยีเนียร์ฟิลด์คอมมูนิเคชันด้วยแอนดรอยด์แพลตฟอร์ม}
+\Large{\noindent\hspace{0.7cm}\setlength{\tabcolsep}{15pt}
+\begin{tabular}{l l}    
+	ภาษาไทย 	& การพัฒนาระบบสำหรับการรวบรวมบัตรสมาชิก บนเทคโนโลยีเนียร์ฟิลด์ \\
+				& คอมมูนิเคชันด้วยแอนดรอยด์แพลตฟอร์ม \\
+	ภาษาอังกฤษ	& Developing a NFC Based Integrated Member Card System for \\
+				& Mobile Devices Using the Android Platform \\    
+\end{tabular}
+}
+
+% Here are some multilingual Unicode fonts: this is Arabic text: {\A السلام عليكم}, this is Hebrew: {\H שלום}, 
+\section{ที่มาและความสำคัญของปัญหา}
+
+เป็นที่ทราบกันในปัจจุบันนี้ว่า องค์กรส่วนใหญ่ต่างมุ่งไปที่ CRM (Customer relationship management) หรือพัฒนาด้านการจัดการลูกค้าสัมพันธ์ 
+และหนึ่งในกระบวนการ CRM ก็คือการทําการตลาดเพื่อผูกสัมพันธ์กับลูกค้าระยะยาว เพื่อให้ลูกค้านั้นอยู่กับเราตลอดไป หรือที่เรียกกันว่า (CLV) Customer Lifetime Value
+
+การใช้บริการกลยุทธ์ Loyalty Program ถือเป็นโปรโมชั่นยอดนิยมแห่งยุค ธุรกิจหลากหลายรูปแบบต่าง
+มุ่งประเด็นใช้สร้างสัมพันธ์กับลูกค้า ตั้งแต่สินค้า ภัตตาคาร ร้านอาหาร มือถือ บัตรเครดิต ห้างสรรพสินค้า สายการ
+บิน โรงภาพยนตร์ และสถานบันเทิง ต่างแห่จัดโปรแกรมมัดใจลูกค้า ไม่ว่าจะเป็นสะสมคะแนน ศูนย์บริการรองรับ
+ลูกค้าทางโทรศัพท์ และหนึ่งในนั้นคือ บัตรสมาชิกเพิ่มสิทธิประโยชน์ หรือส่วนลด เป็นต้น
+
+ข้อดีของการสมัครบัตรสมาชิกเพิ่มสิทธิประโยชน์ หรือส่วนลดก็คือ ช่วยให้เข้าใจความต้องการ และการตอบสนองของลูกค้าในสินค้าหรือบริการ สามารถสร้างผลกําไรในธุรกิจอย่างมีประสิทธิภาพ และสามารถดึงดูดลูกค้าให้กลับมาอีกครั้ง อีกทั้งช่วยเสริมให้โอกาสประสบความสําเร็จ รักษาลูกค้า เด่นชัด และได้ผลมากยิ่งขึ้น
+
+ด้วยเหตุนี้เององค์กรต่าง ๆ จึงมุ่งเน้นการทำบัตรสมาชิกเป็นจำนวนมาก แต่สิ่งที่ตามมากลับพบว่ากลยุทธ์การทำตลาดดังกล่าวกลับไม่ได้ผล เนื่องจากร้านทุกร้านต่างก็มีบัตรสมาชิกเป็นของตัวเอง จึงไม่เกิดความแตกต่างในข้อได้เปรียบหรือเสียเปรียบ อีกทั้งยังเป็นภาระของต้นทุนที่ทุกร้านจะต้องจ่ายไปกับการทำบัตรสมาชิก
+
+\section{ทฤษฏีที่เกี่ยวข้อง}
+
+\section{งานวิจัยที่เกี่ยวข้อง}
+
+\section{แนวคิดและวิธีการดำเนินงาน}
+
+\section{วัตถุประสงค์}
+
+\section{ขอบเขตการดำเนินงาน}
+
+\section{ขั้นตอนการดำเนินงาน}
+
+\section{ประโยชน์โครงงานที่คาดว่าจะได้รับ}
+
+\section{รายการอ้างอิง}
+
+\end{document}  
