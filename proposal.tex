@@ -6,14 +6,36 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
-%\documentclass[12pt]{article}
 \documentclass[a4paper]{article}
-\usepackage{geometry}                	% See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                  % ... or a4paper or a5paper or ... 
-%\geometry{landscape}                	% Activate for for rotated page geometry
+\usepackage{geometry}				% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}				% ... or a4paper or a5paper or ... 
+%\geometry{landscape} 				% Activate for for rotated page geometry
 %\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
 \usepackage{graphicx}
 \usepackage{amssymb}
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont[Mapping=tex-text]{Hoefler Text}
+%\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+%\setmonofont[Scale=MatchLowercase]{Andale Mono}
+\setmainfont[Scale=1.1]{TH Sarabun New} 
+\XeTeXlinebreaklocale 'th_TH'
+
+\usepackage{titlesec}				% add a dot after the section number
+\titlelabel{\thetitle.\quad}
+
+\titleformat*{\section}{\Large\bfseries}
+\titleformat*{\subsection}{\Large}
+\titleformat*{\subsubsection}{\Large}
+\titleformat*{\paragraph}{\large\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
+
+\usepackage{pgfgantt}				%Gantt chart package
+\usepackage{enumitem}				%Enumerated list with square brackets
+\usepackage{indentfirst}				%Paragraph indent and break
+\usepackage[section]{placeins}			%it prevents placing floats before the section
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 
 %page dimension
 %\hoffset = 0.5in
@@ -23,42 +45,9 @@
 % To experiment, open /Applications/Font Book to examine the fonts provided on Mac OS X,
 % and change "Hoefler Text" to any of these choices.
 
-\usepackage{fontspec,xltxtra,xunicode}
-\defaultfontfeatures{Mapping=tex-text}
-%\setromanfont[Mapping=tex-text]{Hoefler Text}
-%\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
-%\setmonofont[Scale=MatchLowercase]{Andale Mono}
-\setmainfont[Scale=1.1]{TH Sarabun New} 
-\XeTeXlinebreaklocale 'th_TH'
-
-% add a dot after the section number
-\usepackage{titlesec}
-\titlelabel{\thetitle.\quad}
-
-\titleformat*{\section}{\Large\bfseries}
-\titleformat*{\subsection}{\Large}
-\titleformat*{\subsubsection}{\Large}
-\titleformat*{\paragraph}{\large\bfseries}
-\titleformat*{\subparagraph}{\large\bfseries}
-
-% add tab
-\newcommand{\tab}{\hspace{1.27cm}}
-
-\reversemarginpar % Move the margin to the left of the page 
-\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
-%\newcommand{\MarginText}[1]{\marginpar{\raggedleft#1}} % New command defining the margin text style
-\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}}
-%\newcommand{\Description}[1]{\hangindent=1.27cm\hangafter=0\noindent\raggedright{#1}} % Define a command for descriptions of each entry - change spacing and font sizes here
-
-\title{ข้อเสนอโครงงานมหาบัณฑิต (MASTER PROJECT PROPOSAL)}
-\author{The Author}
-%\date{}								% Activate to display a given date or no date
-
-%Paragraph indent and break
-\usepackage{indentfirst}
-\setlength{\parindent}{1.27cm}
-\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
-%\setlength{\parskip}{1cm plus4mm minus3mm}
+%\title{ข้อเสนอโครงงานมหาบัณฑิต (MASTER PROJECT PROPOSAL)}
+%\author{The Author}
+%\date{}							% Activate to display a given date or no date
 
 % For many users, the previous commands will be enough.
 % If you want to directly input Unicode, add an Input Menu or Keyboard to the menu bar 
@@ -82,7 +71,7 @@
 \end{center}
 
 \vspace{1cm}
-\Large{\noindent\hspace{0.7cm}\setlength{\tabcolsep}{15pt}
+\Large{\noindent\hspace{0.2cm}\setlength{\tabcolsep}{15pt}
 \begin{tabular}{l l}    
 	\bf ชื่อเรื่อง (ภาษาไทย) 		& การพัฒนาระบบสำหรับการรวบรวมบัตรสมาชิกบนเทคโนโลยี \\
 							& เนียร์ฟิลด์คอมมูนิเคชันด้วยแอนดรอยด์แพลตฟอร์ม \\
@@ -104,11 +93,11 @@
 	\bf อาจารย์ที่ปรึกษา			& อ.เชษฐ พัฒโนทัย \\
 	\bf อาจารย์ที่ปรึกษาร่วม		& \\
 							& \\
-	\bf หน่วยงานที่ร่วมในโครงงาน	& \\
-	\bf ตัวแทนหน่วยงาน			& \\
+	\bf หน่วยงานที่ร่วมในโครงงาน	& - \\
+	\bf ตัวแทนหน่วยงาน			& - \\
 							& \\
-	\bf คำสำคัญ (ภาษาไทย)		& \\
-	\bf คำสำคัญ (ภาษาอังกฤษ)		& \\
+	\bf คำสำคัญ (ภาษาไทย)		& เนียร์ฟิลด์คอมมูนิเคชัน \\
+	\bf คำสำคัญ (ภาษาอังกฤษ)		& Near Field Communication \\
 \end{tabular}
 }
 
@@ -118,9 +107,7 @@
 {\huge \bf ข้อเสนอโครงงานมหาบัณฑิต}
 \end{center}
 
-\noindent{{\LARGE \bf ชื่อหัวเรื่อง}}
-
-%\Description{\MarginText{ภาษาไทยx}การพัฒนาระบบสำหรับการรวบรวมบัตรสมาชิก บนเทคโนโลยีเนียร์ฟิลด์คอมมูนิเคชันด้วยแอนดรอยด์แพลตฟอร์ม}
+\noindent{{\LARGE \bf ชื่อหัวเรื่อง}} \\
 
 \Large{\noindent\hspace{0.7cm}\setlength{\tabcolsep}{15pt}
 \begin{tabular}{l l}    
@@ -146,21 +133,21 @@
 
 \section{ทฤษฏีที่เกี่ยวข้อง}
 
-การวิเคราะห์และออกแบบระบบต้นแบบสำหรับการรวบรวมบัตรสมาชิกบนสมาร์ทโฟนที่ผนวกเข้ากับเทคโนโลยีเอ็นเอฟซี ผู้ทำโครงงานได้ศึกษาเรื่องที่เกี่ยวข้องดังต่อไปนี้เพื่อประกอบการทําโครงงานมหาบัณฑิต แบ่งเป็น ระบบปฏิบัติการแอนดรอยด์ เอสคิวไลท์ (SQLite) และเอ็นเอฟซี ซึ่งสามารถจําแนกเป็นหลักการและทฤษฎีที่เกี่ยวข้อง ดังนี้
+การวิเคราะห์และออกแบบระบบต้นแบบสำหรับการรวบรวมบัตรสมาชิกบนสมาร์ทโฟนที่ผนวกเข้ากับเทคโนโลยีเอ็นเอฟซี ผู้ทำโครงงานได้ศึกษาเรื่องที่เกี่ยวข้องเพื่อประกอบการทําโครงงานมหาบัณฑิต แบ่งเป็น ระบบปฏิบัติการแอนดรอยด์ เอสคิวไลท์ (SQLite) และเอ็นเอฟซี ซึ่งสามารถจําแนกเป็นหลักการและทฤษฎีที่เกี่ยวข้อง ดังนี้
 
 \subsection{Android}
 แอนดรอยด์เป็นระบบปฏิบัติการที่มีพื้นฐานอยู่บนระบบปฏิบัติการลินุกซ์ ถูกออกแบบมาสำหรับ \newline อุปกรณ์ที่ใช้จอสัมผัส เช่นสมาร์ทโฟน และแท็บเล็ตคอมพิวเตอร์ ถูกคิดค้นและพัฒนาโดยบริษัทแอนดรอยด์ (Android, Inc.) ซึ่งต่อมา บริษัทกูเกิล (Google, Inc.) ได้ทำการซื้อต่อบริษัทในปี พ.ศ. 2548 แอนดรอยด์ถูกเปิดตัวเมื่อ ปี พ.ศ. 2550 พร้อมกับการก่อตั้งโอเพนแฮนด์เซตอัลไลแอนซ์ ซึ่งเป็นกลุ่มของบริษัทผลิตฮาร์ดแวร์ ซอฟต์แวร์ และการสื่อสารคมนาคม ที่ร่วมมือกันสร้างมาตรฐานเปิด สำหรับอุปกรณ์พกพา โดยสมาร์ทโฟนที่ใช้ระบบปฏิบัติการแอนดรอยด์เครื่องแรกของโลกคือ เอชทีซี ดรีม วางจำหน่ายเมื่อปี พ.ศ. 2551
 
 \subsection{SQLite}
-เอสคิวไลท์เป็นระบบจัดการฐานข้อมูลเชิงสัมพันธ์ (Relational Database Management System: RDMS) บรรจุอยู่ในโปรแกรมขนาดเล็ก พัฒนาด้วยภาษาซี เป็นระบบฐานข้อมูลที่สามารถทำงานได้โดยไม่จำเป็นต้องพึ่งพาเซิร์ฟเวอร์ ซึ่งแตกต่างกับระบบฐานข้อมูลอื่น ๆ เหมาะกับแอปพลิเคชันที่สามารถทำงานได้ด้วยตัวเอง (Standalone) สามารถนำไปประยุกต์ใช้งานได้หลากหลาย เช่น ดิกชินนารี เว็บบราวเซอร์ แคตาล็อคสินค้า โปรแกรมแบบสอบถาม การเก็บข้อมูลที่ต้องการส่งเป็นไฟล์ข้อมูลทางเมล์หรือมือถือ เป็นต้น
+เอสคิวไลท์เป็นระบบจัดการฐานข้อมูลเชิงสัมพันธ์ (Relational Database Management System: RDMS) บรรจุอยู่ในโปรแกรมขนาดเล็ก พัฒนาด้วยภาษาซี เป็นระบบฐานข้อมูลที่สามารถทำงานได้โดยไม่จำเป็นต้องพึ่งพาเซิร์ฟเวอร์ ซึ่งแตกต่างกับระบบฐานข้อมูลอื่น ๆ เหมาะกับแอปพลิเคชันที่สามารถทำงานได้ด้วยตัวเอง (Standalone) สามารถนำไปประยุกต์ใช้งานได้หลากหลาย เช่น ดิกชินนารี เว็บบราวเซอร์ แคตาล็อคสินค้า โปรแกรมแบบสอบถาม การเก็บข้อมูลที่ต้องการส่งเป็นไฟล์ข้อมูลผ่านทางเมล์หรือสมาร์ทโฟน เป็นต้น
 
 \subsection{NFC}
-เทคโนโลยีเอ็นเอฟซีเป็นเทคโนโลยีสื่อสารไร้สายระยะไกล้ โดยใช้คลื่นวิทยุความถี่สูง รองรับการสื่อสารสองทางระหว่างเครื่องมืออิเล็กทรอนิกส์ในระยะประมาณ 1 - 4 ซม. (10 ซม. ในทางทฤษฎี) ที่ใช้ได้ดีกับโครงสร้างพื้นฐานแบบไร้สัมผัส เอ็นเอฟซีถูกพัฒนาขึ้นโดยบริษัท Sony และ NXP โดยใช้คลื่นความถี่ 13.56 MHz. รับส่งข้อมูลด้วยความเร็ว 424 Kbps บนพื้นฐานมาตรฐานไอเอสโอ/ไออีซี 18092 NFC IP-1 และไอเอสโอ/ไออีซี 14443 (Philips MIFARE and Sony’s FeliCa) โดยมาตรฐานดังกล่าวได้เสนอโหมดการทำงานทั้งสามแบบที่แตกต่างกันดังรูปที่ 1 
+เทคโนโลยีเอ็นเอฟซีเป็นเทคโนโลยีสื่อสารไร้สายระยะไกล้ โดยใช้คลื่นวิทยุความถี่สูง รองรับการสื่อสารสองทางระหว่างเครื่องมืออิเล็กทรอนิกส์ในระยะประมาณ 1 - 4 ซม. (10 ซม. ในทางทฤษฎี) ที่ใช้ได้ดีกับโครงสร้างพื้นฐานแบบไร้สัมผัส เอ็นเอฟซีถูกพัฒนาขึ้นโดยบริษัท Sony และ NXP โดยใช้คลื่นความถี่ 13.56 MHz. รับส่งข้อมูลด้วยความเร็ว 424 Kbps บนพื้นฐานมาตรฐานไอเอสโอ/ไออีซี 18092 NFC IP-1 และไอเอสโอ/ไออีซี 14443 (Philips MIFARE and Sony’s FeliCa) โดยมาตรฐานดังกล่าวได้เสนอโหมดการทำงานทั้งสามแบบ \ref{itm:IDA-Pay} ที่แตกต่างกันดังรูปที่ 1 
 
 \begin{enumerate}
-  \item Reader/Writer mode โหมดนี้อุปกรณ์เอ็นเอฟซีสามารถทำตัวเสมือนเป็นเครื่องอ่านเขียน Contactless Smart Card (หรือบางครั้งเรียกว่า Tag) โดยจะสามารถอ่านข้อมูลจาก Tag ที่ติดอยู่ใน Smartposter หรือจุดให้บริการข้อมูลได้ โดยโหมดดังกล่าวสอดคล้องกับมาตรฐานไอเอสโอ/ไออีซี 14443
+  \item Reader/Writer mode โหมดนี้อุปกรณ์เอ็นเอฟซีสามารถทำตัวเสมือนเป็นเครื่องอ่านเขียน Contactless Smart Card หรือบางครั้งเรียกว่าแท็ก (Tag) โดยจะสามารถอ่านข้อมูลจากแท็กที่ติดอยู่ใน Smartposter หรือจุดให้บริการข้อมูลได้ ซึ่งโหมดดังกล่าวสอดคล้องกับมาตรฐานไอเอสโอ/ไออีซี 14443
   \item  NFC Card Emulation Mode โหมดนี้จะทำงานเสมือนเป็นบัตร Contactless ซึ่งนั่นหมายความว่าอุปกรณ์มือถือตามมาตรฐานเอ็นเอฟซีจะทำตัวเป็นบัตร Contactless Smart Card เพื่อใช้ในการทำธุรกรรมต่าง ๆ ได้
-  \item Peer-to-Peer Mode โหมดนี้จะทำการแลกเปลี่ยนข้อมูลระหว่างอุปกรณ์เอ็นเอฟซีด้วยกันเช่นนามบัตร รูปถ่าย แฟ้มข้อมูลอื่น ๆ โดยโหมดดังกล่าวสอดคล้องกับมาตรฐานไอเอสโอ/ไออีซี 18092
+  \item Peer-to-Peer Mode โหมดนี้จะทำการแลกเปลี่ยนข้อมูลระหว่างอุปกรณ์เอ็นเอฟซีด้วยกันเช่นนามบัตร รูปถ่าย แฟ้มข้อมูลอื่น ๆ ซึ่งโหมดดังกล่าวสอดคล้องกับมาตรฐานไอเอสโอ/ไออีซี 18092
 \end{enumerate}
 
 \begin{figure}[ht!]
@@ -178,40 +165,41 @@
 
 \section{งานวิจัยที่เกี่ยวข้อง}
 
-การวิเคราะห์และออกแบบระบบต้นแบบสำหรับการรวบรวมบัตรสมาชิกบนสมาร์ทโฟนที่ผนวกเข้ากับเทคโนโลยีเอ็นเอฟซี ผู้ทำโครงงานได้ศึกษางานวิจัยที่เกี่ยวข้องดังต่อไปนี้เพื่อประกอบการทําโครงงานมหาบัณฑิต ดังนี้
+การวิเคราะห์และออกแบบระบบต้นแบบสำหรับการรวบรวมบัตรสมาชิกบนสมาร์ทโฟนที่ผนวกเข้ากับเทคโนโลยีเอ็นเอฟซี ผู้ทำโครงงานได้ศึกษางานวิจัยที่เกี่ยวข้องเพื่อประกอบการทําโครงงานมหาบัณฑิต ดังนี้
 
 \subsection{Shopping Application System With Near Field Communication (NFC) Based on Android}
 
-ผลงานวิจัย ~\ref{pap:1}  ได้นำเสนอระบบต้นแบบสำหรับการชอปปิ้ง (shopping) ในห้างสรรพสินค้าบนเทคโนโลยีเนียร์ฟิลด์คอมมูนิเคชันด้วยแอนดรอยด์แพลตฟอร์ม ซึ่งผู้ใช้งานจะทำการชอปปิ้งโดยเลือกสินค้าที่ต้องการ และทำการแท็กกับสินค้าที่มีชิปประทับไปกับสินค้า โดยมีแอนดรอยด์สมาร์ทโฟนเป็นตัวอ่านข้อมูลและรายละเอียดของสินค้า ผู้ใช้งานสามารถทำการเพิ่ม ลบจำนวนของสินค้า หรือทำการลบสินค้าที่ไม่ต้องการได้ นอกจากนี้ผู้ใช้งานจะทำการยืนยันจับจ่ายสินค้าโดยยืนยันกับผู้ขายซึ่งระบบจะทำการบันทึกรายการสินค้าที่จับจ่าย
+ผลงานวิจัย \ref{itm:shopping}  ได้นำเสนอระบบต้นแบบสำหรับการชอปปิ้ง (shopping) ในห้างสรรพสินค้าบนเทคโนโลยีเนียร์ฟิลด์คอมมูนิเคชันด้วยแอนดรอยด์แพลตฟอร์ม ซึ่งผู้ใช้งานจะทำการชอปปิ้งโดยเลือกสินค้าที่ต้องการ และทำการแท็กกับสินค้าที่มีชิปประทับไปกับสินค้า โดยมีแอนดรอยด์สมาร์ทโฟนเป็นตัวอ่านข้อมูลและรายละเอียดของสินค้า ผู้ใช้งานสามารถทำการเพิ่ม ลบจำนวนของสินค้า หรือทำการลบสินค้าที่ไม่ต้องการได้ นอกจากนี้ผู้ใช้งานจะทำการยืนยันจับจ่ายสินค้าโดยยืนยันกับผู้ขายซึ่งระบบจะตรวจสอบรหัสสำหรับการยืนยันตัวบุคคลด้วยรหัสลับบุคคล (Personal Identification Number: PIN) และทำการบันทึกรายการสินค้าที่จับจ่าย
 
 \subsection{IDA-Pay: an innovative micro-payment system based on NFC technology for Android mobile devices}
-
-~\ref{pap:2}
 
 %----------------------------------------------------------------------------------------
 
 \section{แนวคิดและวิธีการดำเนินงาน}
 
-โครงงานมหาบัณฑิตนี้ต้องการนําเสนอการออกแบบและวิเคราะห์ระบบสำหรับการรวบรวมบัตรสมาชิกบนเทคโนโลยีเอ็นเอฟซีด้วยแอนดรอยด์แพลตฟอร์ม ซึ่งมีรายละเอียดดังนี้
+โครงงานมหาบัณฑิตนี้นําเสนอการออกแบบและวิเคราะห์ระบบสำหรับการรวบรวมบัตรสมาชิกบนเทคโนโลยีเอ็นเอฟซีด้วยแอนดรอยด์แพลตฟอร์ม ซึ่งมีรายละเอียดดังนี้
 
 \subsection{การวิเคราะห์ความต้องการของระบบต้นแบบ}
 
 \subsection{การออกแบบระบบต้นแบบ}
 
-เพื่อการออกแบบหน้าที่พื้นฐานของการทํางานระบบต้นแบบเพื่อสนับสนุนการวางแผนโครงการ จึงใช้แนวความคิดเชิงวัตถุ (Object-Oriented Paradigm) ในการวิเคราะห์และออกแบบ โดยใช้แผนภาพ ยูสเคสและแผนภาพกิจกรรมแสดงหน้าที่การทํางานของระบบต้นแบบ
+เพื่อการออกแบบหน้าที่พื้นฐานของการทํางานระบบต้นแบบเพื่อสนับสนุนการวางแผนโครงการ จึงใช้แนวความคิดเชิงวัตถุ (Object-Oriented Paradigm) ในการวิเคราะห์และออกแบบ โดยใช้แผนภาพยูสเคส และแผนภาพกิจกรรมแสดงหน้าที่การทํางานของระบบต้นแบบ
 
 \subsubsection{ออกแบบฐานข้อมูลเชิงสัมพันธ์}
 
-เพื่อแสดงความสัมพันธ์ของฐานข้อมูลและแบบจําลองข้อมูลที่ใช้สําหรับอธิบายถึงโครงสร้างและ ความสัมพันธ์ระหว่างข้อมูลภายในฐานข้อมูล ออกแบบ โดยใช้แผนภาพคลาสของระบบต้นแบบ
+เพื่อแสดงความสัมพันธ์ของฐานข้อมูลและแบบจําลองข้อมูลที่ใช้สําหรับอธิบายถึงโครงสร้างและ ความสัมพันธ์ระหว่างข้อมูลภายในฐานข้อมูล ออกแบบโดยใช้แผนภาพคลาสของระบบต้นแบบ
 
 \subsubsection{ออกแบบส่วนต่อประสานกับผู้ใช้}
 
-เพื่อแสดงโครงสร้าง และองค์ประกอบของหน้าจอการทํางานที่จะปรากฏในระบบต้นแบบ รวมถึงข้อความที่ใช้แสดงเตือนหรือแสดงความผิดพลาด และข้อความช่วยเหลือผู้ใช้งาน โดยแสดงเป็นภาพ ต้นแบบ (Prototype)
+เพื่อแสดงโครงสร้าง และองค์ประกอบของหน้าจอการทํางานที่จะปรากฏในระบบต้นแบบ รวมถึงข้อความที่ใช้แสดงเตือนหรือแสดงความผิดพลาด และข้อความช่วยเหลือผู้ใช้งาน โดยแสดงเป็นภาพต้นแบบ (Prototype)
 
 \subsection{พัฒนาระบบต้นแบบ}
+
+การพัฒนาระบบต้นแบบประกอบไปด้วย 2 ส่วนหลัก คือ โปรแกรมสำหรับลูกค้า และโปรแกรมสำหรับร้านค้า
+
 \subsection{ทดสอบและตรวจสอบคุณภาพของระบบ}
 
-การทดสอบระบบต้นแบบมีเป้าหมายเพื่อเพื่อตรวจสอบการทํางานที่ผิดพลาด และการทํางานไม่ถูกต้องของระบบภายใต้การทดสอบภายใน (Internal Testing) และภายนอก (External Testing) รวมถึงสภาพแวดล้อมสําหรับการทดสอบและกรณีที่ทดสอบ ซึ่งจะนํามาเป็นผลสรุปการทดสอบระบบต้นแบบ
+การทดสอบระบบต้นแบบมีเป้าหมายเพื่อค้นหาข้อผิดพลาดที่มีอยู่ในโปรแกรม ตรวจสอบความถูกต้องของฟังก์ชันการทำงานของซอฟต์แวร์ (Verification) ตรวจสอบความถูกต้องของฟังก์ช้นการทํางานต่อความต้องการของผู้ใช้งาน (Validation) การทดสอบจะทำโดยการสร้างข้อมูลจำลองร้านค้าและข้อมูลของลูกค้า จากนั้นจะทำการส่งข้อมูลเพื่อทดสอบการสื่อสารระหว่างสมาร์ทโฟน ซึ่งจะนํามาเป็นผลสรุปการทดสอบระบบต้นแบบ
 
 \subsection{เรียบเรียงและจัดทําเอกสารของระบบ}
 
@@ -233,12 +221,67 @@
 \subsection{ทดสอบและตรวจสอบคุณภาพของระบบ}
 \subsection{เรียบเรียงและจัดทําเอกสารของระบบ}
 
+%\begin{figure}[ftbp]
+\begin{center}
+%\begin{tikzpicture}[node distance=0cm]
+%\node[align=center] at (-4,0) (o) {This is\\ adjust node}
+\begin{ganttchart}[y unit title=0.5cm,
+y unit chart=0.5cm,
+vgrid,hgrid, 
+title label anchor/.style={below=-1.6ex},
+title left shift=.05,
+title right shift=-.05,
+title height=1,
+bar/.style={fill=gray!50},
+bar label anchor/.append style={align=left, text width=7em},
+incomplete/.style={fill=white},
+progress label text={},
+bar height=0.7,
+group right shift=0,
+group top shift=.6,
+group height=.3,
+group peaks={}{}{.2}]{18}
+%labels
+\gantttitle{ระยะเวลาในการดำเนินการ}{18} \\
+\gantttitle{มิย. 56}{2}
+\gantttitle{กค. 56}{2} 
+\gantttitle{สค. 56}{2} 
+\gantttitle{กย. 56}{2} 
+\gantttitle{ตค. 56}{2} 
+\gantttitle{พย. 56}{2}
+\gantttitle{ธค. 56}{2}
+\gantttitle{มค. 57}{2}
+\gantttitle{กพ. 57}{2} \\
+%tasks
+\ganttbar{1. ศึกษาข้อมูลพื้นฐานที่เกี่ยวข้อง}{1}{2} \\
+\ganttbar{2. ศึกษาเทคโนโลยีที่จะนํามาใช้}{2}{4} \\
+\ganttbar{3. วิเคราะห์และออกแบบ}{4}{7} \\
+\ganttbar{4. พัฒนาระบบต้นแบบ}{8}{12} \\
+\ganttbar{5. ทดสอบและตรวจสอบ}{11}{15} \\
+\ganttbar{6. เรียบเรียงและจัดทําเอกสาร}{14}{18} \\
+%\ganttbar[progress=33]{task 5}{20}{22} \\
+
+%relations 
+\ganttlink{elem0}{elem1}
+\ganttlink{elem1}{elem2} 
+\ganttlink{elem2}{elem3}
+\ganttlink{elem3}{elem4} 
+\ganttlink{elem4}{elem5}
+
+\end{ganttchart}
+%\end{tikzpicture}
+\end{center}
+%\caption{Gantt Chart}
+%\end{figure}
+
+
 \section{ประโยชน์โครงงานที่คาดว่าจะได้รับ}
 
 \section{รายการอ้างอิง}
 
-\label{pap:1}
-\label{pap:2}
-gsgt
+\begin{enumerate}[label={[\arabic*]}]
+  \item \label{itm:shopping} Emir Husni1, Sugeng Purwantoro. Shopping Application System With Near Field Communication (NFC) Based on Android.
+  \item \label{itm:IDA-Pay} Second item
+\end{enumerate}
 
 \end{document}  
