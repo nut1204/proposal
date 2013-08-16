@@ -128,7 +128,7 @@
 
 จากปัญหาที่กล่าวมาข้างต้น ปัจจุบันเทคโนโลยีก้าวเข้ามามีส่วนในชีวิตประจำวันของเรามากขึ้น ในแต่ละปีที่ผ่านไปจะเห็นว่ามีคนที่ใช้อุปกรณ์พกพากันมากขึ้น ส่งผลให้จำนวนการเติบโตของอุปกรณ์พกพาที่สูงขึ้นมาก \ref{itm:shopping} ยิ่งไปกว่านั้นอุปกรณ์พกพาต่าง ๆ ได้ผนวกเข้ากับเทคโนโลยีสื่อสารไร้สาย ซึ่งจะช่วยรองรับการสื่อสารระหว่างเครื่องมืออิเล็กทรอนิกส์ในระยะใกล้ ๆ \ref{itm:rpp-mobile} ด้วยปัจจัยเหล่านี้เองถือเป็นโอกาสในการทรานส์ฟอร์มข้อมูลบัตรสมาชิกของแต่ละร้านค้าต่าง ๆ ลงบนอุปกรณ์พกพา 
 
-โครงงานมหาบัณฑิตนี้นำเสนอระบบต้นแบบ (Prototype) สำหรับการรวบรวมบัตรสมาชิกบนสมาร์ทโฟนที่ผนวกเข้ากับเทคโนโลยีเอ็นเอฟซี (Near Field Communication: NFC) ซึ่งโครงงานนี้จะมุ่งเน้นไปที่ความสามารถใช้งาน (Usability) และความสามารถเชิงฟังก์ชั่น (Functionality) ของสมาร์ทโฟนให้สามารถทำหน้าที่แทนบัตรสมาชิกของร้านค้าต่าง ๆ ได้ โครงงานนี้มีจุดประสงค์เพื่อออกแบบและพัฒนาระบบสำหรับการรวบรวมบัตรสมาชิกโดยใช้เทคโนโลยีเนียร์ฟิลด์คอมมูนิเคชันบนแอนดรอยด์แพลตฟอร์ม เพื่อแก้ปัญหาการจัดการบัตรสมาชิกของทางร้านค้า และลดการพกพาบัตรสมาชิกของลูกค้า โดยระบบต้นแบบดังกล่าวที่ถูกพัฒนาขึ้นสามารถนำไปใช้กับร้านค้า ร้านอาหาร ห้างสรรพสินค้าต่าง ๆ ได้
+โครงงานมหาบัณฑิตนี้นำเสนอระบบต้นแบบ (Prototype) สำหรับการรวบรวมบัตรสมาชิกบนสมาร์ทโฟนที่ผนวกเข้ากับเทคโนโลยีเอ็นเอฟซี (Near Field Communication: NFC) ซึ่งโครงงานนี้จะมุ่งเน้นไปที่ความสามารถใช้งาน (Usability) และความสามารถเชิงฟังก์ชัน (Functionality) ของสมาร์ทโฟนให้สามารถทำหน้าที่แทนบัตรสมาชิกของร้านค้าต่าง ๆ ได้ โครงงานนี้มีจุดประสงค์เพื่อออกแบบและพัฒนาระบบดังกล่าว เพื่อแก้ปัญหาการจัดการบัตรสมาชิกของทางร้านค้า และลดการพกพาบัตรสมาชิกของลูกค้า โดยระบบต้นแบบดังกล่าวที่ถูกพัฒนาขึ้นสามารถนำไปใช้กับร้านค้า ร้านอาหาร ห้างสรรพสินค้าต่าง ๆ ได้
 
 %----------------------------------------------------------------------------------------
 
@@ -194,14 +194,15 @@
 โครงงานมหาบัณฑิตนี้มีวัตถุประสงค์เพื่อพัฒนาระบบสำหรับการรวบรวมบัตรสมาชิกบนเทคโนโลยีเนียร์ฟิลด์คอมมูนิเคชันด้วยแอนดรอยด์แพลตฟอร์ม
 
 \section{ขอบเขตการดำเนินงาน}
-
+\subsection{วิเคราะห์และออกแบบระบบต้นแบบสำหรับการรวบรวมบัตรสมาชิกบนสมาร์ทโฟนที่ผนวกเข้ากับเทคโนโลยีเอ็นเอฟซี ซึ่งมีฟังก์ชันการทำงานที่ประกอบไปด้วย}
 \subsection{ระบบมีส่วนที่ติดต่อกับผู้ใช้งานในลักษณะที่เป็นกราฟิก (Graphic User Interface : GUI)}
 \subsection{เครื่องมือที่ใช้ในการพัฒนาระบบ มีรายละเอียดดังต่อไปนี้}
 \begin{enumerate}
-	\item แมคบุ๊คแอร์ บนระบบปฏิบัติการแมคโอเอสเท็นเวอร์ชั่น 10.8.4 ขึ้นไปซึ่งติดตั้ง
+	\item แมคบุ๊คแอร์ (Macbook Air) บนระบบปฏิบัติการแมคโอเอสเท็น (Max OS X) เวอร์ชั่น 10.8.4 ขึ้นไป ซึ่งติดตั้ง
 	\begin{enumerate}
 		\item Android Developer Tools (ADT) : adt--bundle--mac--x86\textunderscore64--20130729.zip
 		\item Eclipse Platform Version: 4.2.1
+		\item Adobe Photoshop สำหรับออกแบบส่วนต่อประสานกับผู้ใช้งาน
 	\end{enumerate}
   	\item สมาร์ทโฟนรุ่น LG Nexus 4 บนระบบปฏิบัติการแอนดรอยด์เวอร์ชั่น 4.3 ขึ้นไป ซึ่งผนวกเข้ากับเทคโนโลยีเอ็นเอฟซี
 \end{enumerate}
@@ -272,7 +273,7 @@ group peaks={}{}{.2}]{18}
 \section{รายการอ้างอิง}
 \begin{enumerate}[label={[\arabic*]}]
   	\item \label{itm:shopping} Emir Husni1, Sugeng Purwantoro. Shopping Application System With Near Field Communication (NFC) Based on Android.
-  	\item \label{itm:IDA-Pay} Second item
+  	\item \label{itm:IDA-Pay} Mainetti, L.; Patrono, L.; Vergallo, R., "IDA-Pay: An innovative micro-payment system based on NFC technology for Android mobile devices," Software, Telecommunications and Computer Networks (SoftCOM), 2012 20th International Conference on , vol., no., pp.1,6, 11-13 Sept. 2012
 	\item \label{itm:rpp-mobile} Resuscitating privacy-preserving mobile payment with customer in complete control
 	\item \label{itm:prp-rfid} L. Catarinucci, S. Tedesco, D. De Donno, L. Tarricone: "Platform-Robust Passive UHF RFID Tags: a Case-Study in Robotics," Progress In Electromagnetics Research C, Vol. 30, 27-39, 2012.
 	\item \label{itm:cicc} International Standard ISO/IEC 14443-1-2-3-4, Identification cards - Contactless integrated circuit cards - Proximity cards, 2008-07-15, ISO/IEC 2008, Switzerland.
